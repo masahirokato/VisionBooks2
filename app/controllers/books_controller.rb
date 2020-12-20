@@ -3,7 +3,7 @@
 class BooksController < ApplicationController
   before_action :set_book, only: %i[show]
   before_action :logged_in_user
-
+  
   def new
     @places = Place.all
     @book = Book.new

@@ -6,12 +6,12 @@
 
 <%= paginate @books %>
 
-<div class="row mt-5 d-flex">
+<div class="row mt-5 d-flex  justify-content-between">
 	<% @books.each do |book| %>
 		<div class="book text-center">
 			<div class="bookcontainer">
           <a href="/books/<%= book.id %>"><img src="<%= book.image_url %>" onError="this.onerror=null;this.src='/noimage.png';" height="170"/></a>
-          <p><%= link_to book.title, book %></p>
+          <p class="textOverflowTest1"><%= link_to book.title, book %></p>
         </div>
 		</div>
 	<% end %>
